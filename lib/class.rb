@@ -1,0 +1,4 @@
+
+class ClassClass
+
+end
