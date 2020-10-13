@@ -1,4 +1,3 @@
-
 class Player
   attr_accessor :name, :life_points
 
@@ -8,7 +7,7 @@ class Player
   end
 
   def show_state
-    puts "#{@name} a #{@life_points} points de vie"
+    "#{@name} a #{@life_points} points de vie"
   end
 
   def gets_damage(damage)
@@ -30,5 +29,4 @@ class Player
   def compute_damage
    return rand(1..6)
  end
-
 end
