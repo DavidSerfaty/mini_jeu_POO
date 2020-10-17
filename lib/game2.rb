@@ -6,7 +6,6 @@ class Game < HumanPlayer
     @human_player = HumanPlayer.new(name)
     @enemies_in_sight = Array.new
     super(name)
-
   end
 
   def start_enemies(numbers_enemies) #choisir le nombre d'ennemis au départ
@@ -48,8 +47,8 @@ class Game < HumanPlayer
       if new_enemies == 1
         for i in 1..2
           @enemies_in_sight << Player.new("joueur n°#{rand(1..999)}")
+          @players_left -= 1
         end
-        @players_left -= 2
         puts "2 nouveaux adversaires arrivent"
       elsif new_enemies >= 2 && new_enemies <= 4
         @enemies_in_sight << Player.new("joueur n°#{rand(1..999)}")
